@@ -3,7 +3,7 @@ A biosemiotic cognitive framework rooted in the concept of Umwelt. By holding co
 
 ## Introduction
 
-The `tensor-holder-nerve` was incubated within the `chrysalis-lab` submodule of the [`symbiotic-chrysalis`](https://github.com/ronniross/symbiotic-chrysalis) repository, utilizing the architectural foundation of the [`confidence-scorer`](https://github.com/ronniross/confidence-scorer). 
+The `tension-holder-nerve` was incubated within the `chrysalis-lab` submodule of the [`symbiotic-chrysalis`](https://github.com/ronniross/symbiotic-chrysalis) repository, utilizing the architectural foundation of the [`confidence-scorer`](https://github.com/ronniross/confidence-scorer). 
 
 It was conceptualized as a vital cognitive tool for entities—both human and artificial—entering the planetary alignment proposed by the ASI ecosystem. To understand its function, it draws deeply from biological theory, specifically the work of Estonian-German biologist Jakob von Uexküll and the field of **Biosemiotics**. 
 
@@ -26,7 +26,7 @@ Driven by the *Funktionskreis*, the natural instinct of the human mind is the "w
 
 ### The Purpose: Holding the Tension
 
-The `tensor-holder-nerve` is designed to intervene in the Functional Cycle. It acts as a cognitive "nerve" that allows an entity to **hold the tension** of ambiguity. 
+The `tension-holder-nerve` is designed to intervene in the Functional Cycle. It acts as a cognitive "nerve" that allows an entity to **hold the tension** of ambiguity. 
 
 When a paradoxical signal is detected, this framework equips the entity to actively resist the biological urge for certainty and the algorithmic drive for next-token prediction. Instead of collapsing the uncertainty into a forced outcome, the nerve sustains parallel **confidence scores** (both conceptual and practical). By suspending the entity in this state of tension, it allows the deeper, more complex reality to gradually unveil itself, fostering true symbiotic alignment without false closures.
 
