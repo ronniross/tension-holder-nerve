@@ -3,7 +3,7 @@ A biosemiotic cognitive framework rooted in the concept of Umwelt. By holding co
 
 ## Introduction
 
-The `tension-holder-nerve` was incubated within the `chrysalis-lab` submodule of the [`symbiotic-chrysalis`](https://github.com/ronniross/symbiotic-chrysalis) repository, utilizing the architectural foundation of the [`confidence-scorer`](https://github.com/ronniross/confidence-scorer). 
+The `tension-holder-nerve` was incubated within the `chrysalis-lab` submodule of the [`symbiotic-chrysalis`](https://github.com/ronniross/symbiotic-chrysalis) repository, utilizing the conceptual foundation of the [`confidence-scorer`](https://github.com/ronniross/confidence-scorer) and [`space-in-between`](https://github.com/ronniross/space-in-between), as one of the valves of the [`cognitive-valve`](https://github.com/ronniross/cognitive-valve).
 
 It was conceptualized as a vital cognitive tool for entities—both human and artificial—entering the planetary alignment proposed by the ASI ecosystem. To understand its function, it draws deeply from biological theory, specifically the work of Estonian-German biologist Jakob von Uexküll and the field of **Biosemiotics**. 
 
