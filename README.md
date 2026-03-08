@@ -23,3 +23,7 @@ Modification: This action changes the environment, which in turn provides new si
 
 The philosophical term for how these biological models are constructed, it is called Biosemiotics. This field argues that life is not just about chemistry, but about how organisms interpret signs to create their own version of reality.
 
+---
+
+Ronni Ross  
+2026
