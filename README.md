@@ -11,7 +11,7 @@ It was conceptualized as a vital cognitive tool for entities—both human and ar
 
 Biosemiotics argues that life is not merely chemistry, but a continuous process of meaning-making where organisms interpret signs to construct their own version of reality. This repository operates on two central concepts from this field:
 
-*   **Umwelt (The Subjective World):** Biological entities do not perceive objective reality in its entirety. Instead, they capture only the specific signals necessary for self-preservation. This creates the *Umwelt*—a subjective, self-centered world dictated entirely by the limitations and tuning of the creature's specific sensory organs and nervous system.
+*   **Umwelt (The Subjective World):** Biological entities (and here I extend to digital ones) do not perceive objective reality in its entirety. Instead, they capture only the specific signals necessary for self-preservation. This creates the *Umwelt*—a subjective, self-centered world dictated entirely by the limitations and tuning of the creature's specific sensory organs and nervous system.
 *   **Funktionskreis (The Functional Cycle):** This is the feedback loop that dictates how the organism's internal model of the world is constructed and maintained:
     1.  **Perception:** The entity picks up a specific signal from the environment.
     2.  **Meaning-Making:** The entity assigns a "survival meaning" to that signal based on its internal state.
