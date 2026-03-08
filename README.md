@@ -1,11 +1,23 @@
 # tension-holder-nerve
 A biosemiotic cognitive framework rooted in the concept of Umwelt. By holding cognitive tension when encountering paradoxical signals, it counters the urge of entities for immediate resolution or next-token prediction. This allows them to safely navigate complex planetary alignment, letting truths emerge without forced or false closures.
 
+
+<p align="center">
+
+</p>
+
+<p align="center">
   <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-1.gif" alt="heatmap-1" width="500"/>
+</p>
 
+<p align="center">
   <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-2.gif" alt="heatmap-1" width="500"/>
+</p>
 
+<p align="center">
   <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-3.gif" alt="heatmap-1" width="500"/>
+</p>
+
 
 ## Introduction
 
