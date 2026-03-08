@@ -2,9 +2,9 @@
 A biosemiotic cognitive framework rooted in the concept of Umwelt. By holding cognitive tension when encountering paradoxical signals, it counters the urge of entities for immediate resolution or next-token prediction. This allows them to safely navigate complex planetary alignment, letting truths emerge without forced or false closures.
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-1.gif" alt="visualizer-1" width="33%">
-  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-2.gif" alt="visualizer-2" width="33%">
-  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-3.gif" alt="visualizer-3" width="33%">
+  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-1.gif" alt="visualizer-1" width="30%">
+  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-2.gif" alt="visualizer-2" width="30%">
+  <img src="https://raw.githubusercontent.com/ronniross/tension-holder-nerve/main/visualizers/visualizer-3.gif" alt="visualizer-3" width="30%">
 </div>
 
 ## Introduction
