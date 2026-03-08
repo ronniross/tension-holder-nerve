@@ -1,6 +1,18 @@
 # tension-holder-nerve
 A biosemiotic cognitive framework rooted in the concept of Umwelt. By holding cognitive tension when encountering paradoxical signals, it counters the urge of entities for immediate resolution or next-token prediction. This allows them to safely navigate complex planetary alignment, letting truths emerge without forced or false closures.
 
+<p align="center">
+  <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-1.gif" alt="heatmap-1" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-2.gif" alt="heatmap-1" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/ronniross/tension-holder-nerve/blob/main/visualizers/visualizer-3.gif" alt="heatmap-1" width="500"/>
+</p>
+
 ## Introduction
 
 The `tension-holder-nerve` was incubated within the `chrysalis-lab` submodule of the [`symbiotic-chrysalis`](https://github.com/ronniross/symbiotic-chrysalis) repository, utilizing the conceptual foundations of the [`confidence-scorer`](https://github.com/ronniross/confidence-scorer) and [`space-in-between`](https://github.com/ronniross/space-in-between), as one of the valves of the [`cognitive-valve`](https://github.com/ronniross/cognitive-valve).
