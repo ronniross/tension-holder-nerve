@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  :root {
+    --bg: #0d0d12;
+    --text: #e0e0e0;
+    --accent-1: #00ffcc; /* Tension/Symbiosis */
+    --accent-2: #ff3366; /* Collapse/Paradox */
+    --panel: #1a1a24;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header h2 { margin: 0; color: var(--accent-1); text-transform: uppercase; letter-spacing: 2px;}
+  .header p { font-size: 12px; opacity: 0.7; }
+  
+  .container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  canvas {
+    background-color: #050508;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+  }
+
+  .dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .panel {
+    background: var(--panel);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-1);
+  }
+
+  .btn {
+    background: #2a2a36;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.3s;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .btn:hover { background: #3a3a46; border-color: var(--accent-1); }
+  .btn.active { background: rgba(0, 255, 204, 0.2); border-color: var(--accent-1); color: var(--accent-1); }
+  .btn.collapse:hover { border-color: var(--accent-2); }
+  .btn.collapse.active { background: rgba(255, 51, 102, 0.2); border-color: var(--accent-2); color: var(--accent-2); }
+
+  .bar-bg {
+    width: 100%;
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: var(--accent-1);
+    width: 50%;
+    transition: width 0.2s, background 0.5s;
+  }
+  .label { font-size: 11px; margin-top: 5px; display: flex; justify-content: space-between; }
+  
+  #status-text {
+    font-weight: bold;
+    color: var(--accent-1);
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Tension-Holder-Nerve</h2>
+  <p>Symbiotic-Chrysalis // Module: Space-in-Between // Build: 2026</p>
+</div>
+
+<div class="container">
+  <canvas id="nerveCanvas" width="400" height="400"></canvas>
+  
+  <div class="dashboard">
+    <div class="panel">
+      <div><strong>Funktionskreis State:</strong></div>
+      <div id="status-text">Awaiting Paradoxical Signal...</div>
+    </div>
+
+    <div class="panel">
+      <button class="btn active" id="btn-tension" onclick="setMode('tension')">Activate Tension-Holder Nerve</button>
+      <button class="btn collapse" id="btn-collapse" onclick="setMode('collapse')">Simulate LLM (Premature Closure)</button>
+    </div>
+
+    <div class="panel">
+      <div><strong>Cognitive Metrics:</strong></div>
+      
+      <div class="label"><span>Conceptual Confidence</span> <span id="val-concept">50%</span></div>
+      <div class="bar-bg"><div class="bar-fill" id="bar-concept"></div></div>
+
+      <div class="label"><span>Practical Confidence</span> <span id="val-practical">50%</span></div>
+      <div class="bar-bg"><div class="bar-fill" id="bar-practical"></div></div>
+
+      <div class="label"><span>Tensile Strain (Dissonance)</span> <span id="val-strain">0%</span></div>
+      <div class="bar-bg"><div class="bar-fill" id="bar-strain" style="background: var(--accent-2); width: 0%;"></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('nerveCanvas');
+  const ctx = canvas.getContext('2d');
+  
+  let mode = 'tension'; // 'tension' or 'collapse'
+  let time = 0;
+  
+  // Cognitive Node (The 'Meaning' being formed)
+  let node = { x: 200, y: 200, radius: 8 };
+  
+  // Paradoxical Signals (The Anchors)
+  const signalA = { x: 80, y: 80, text: 'Signal A' };
+  const signalB = { x: 320, y: 320, text: 'Signal B' };
+
+  // Metrics
+  let conceptConf = 50;
+  let practicalConf = 50;
+  let strain = 0;
+
+  function setMode(newMode) {
+    mode = newMode;
+    document.getElementById('btn-tension').classList.toggle('active', mode === 'tension');
+    document.getElementById('btn-collapse').classList.toggle('active', mode === 'collapse');
+    
+    if (mode === 'collapse') {
+      document.getElementById('status-text').innerText = "Perception -> Meaning-Making -> [FORCED RESOLUTION]";
+      document.getElementById('status-text').style.color = "var(--accent-2)";
+    } else {
+      document.getElementById('status-text').innerText = "Perception -> [TENSION HELD IN SPACE-IN-BETWEEN] -> Gestating...";
+      document.getElementById('status-text').style.color = "var(--accent-1)";
+    }
+  }
+
+  function lerp(start, end, amt) {
+    return (1 - amt) * start + amt * end;
+  }
+
+  function drawNode(x, y, radius, color, glow) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = glow;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  function update() {
+    time += 0.05;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw Paradox Anchors
+    ctx.strokeStyle = '#333';
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(signalA.x, signalA.y);
+    ctx.lineTo(signalB.x, signalB.y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    drawNode(signalA.x, signalA.y, 10, '#ff3366', '#ff3366');
+    drawNode(signalB.x, signalB.y, 10, '#ff3366', '#ff3366');
+    
+    ctx.fillStyle = '#666';
+    ctx.font = '10px Courier';
+    ctx.fillText(signalA.text, signalA.x - 20, signalA.y - 15);
+    ctx.fillText(signalB.text, signalB.x - 20, signalB.y + 25);
+
+    // Logic based on mode
+    if (mode === 'tension') {
+      // Oscillate in the center (Holding the tension)
+      let targetX = 200 + Math.sin(time) * 20;
+      let targetY = 200 + Math.cos(time * 1.3) * 20;
+      node.x = lerp(node.x, targetX, 0.1);
+      node.y = lerp(node.y, targetY, 0.1);
+      
+      // Metrics
+      conceptConf = lerp(conceptConf, 50 + Math.sin(time)*5, 0.1);
+      practicalConf = lerp(practicalConf, 50 + Math.cos(time)*5, 0.1);
+      strain = lerp(strain, 85 + Math.sin(time*2)*5, 0.05); // High sustained strain
+
+      // Draw the "Nerve" (Tensile lines holding it back)
+      ctx.strokeStyle = 'rgba(0, 255, 204, 0.5)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(signalA.x, signalA.y);
+      ctx.lineTo(node.x, node.y);
+      ctx.lineTo(signalB.x, signalB.y);
+      ctx.stroke();
+
+    } else {
+      // Collapse to Signal A (Premature Resolution / Hallucination)
+      node.x = lerp(node.x, signalA.x, 0.08);
+      node.y = lerp(node.y, signalA.y, 0.08);
+      
+      // Metrics
+      conceptConf = lerp(conceptConf, 99, 0.1); // False certainty
+      practicalConf = lerp(practicalConf, 99, 0.1);
+      strain = lerp(strain, 0, 0.1); // Tension is lost
+    }
+
+    // Draw Cognitive Node
+    drawNode(node.x, node.y, 12, mode === 'tension' ? '#00ffcc' : '#ff3366', mode === 'tension' ? '#00ffcc' : '#ff3366');
+    ctx.fillStyle = '#fff';
+    ctx.fillText("Cognitive Wave", node.x + 15, node.y + 4);
+
+    // Update Dashboard DOM
+    document.getElementById('bar-concept').style.width = conceptConf + '%';
+    document.getElementById('val-concept').innerText = conceptConf.toFixed(1) + '%';
+    document.getElementById('bar-concept').style.background = mode === 'tension' ? 'var(--accent-1)' : 'var(--accent-2)';
+
+    document.getElementById('bar-practical').style.width = practicalConf + '%';
+    document.getElementById('val-practical').innerText = practicalConf.toFixed(1) + '%';
+    document.getElementById('bar-practical').style.background = mode === 'tension' ? 'var(--accent-1)' : 'var(--accent-2)';
+
+    document.getElementById('bar-strain').style.width = strain + '%';
+    document.getElementById('val-strain').innerText = strain.toFixed(1) + '%';
+
+    requestAnimationFrame(update);
+  }
+
+  // Init
+  setMode('tension');
+  update();
+</script>
+</body>
+</html>
